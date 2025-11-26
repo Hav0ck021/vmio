@@ -1,5 +1,4 @@
 #include "stack.h"
-#include "../registers/registers.h"
 
 void stack_init(Stack *stk)
 {
@@ -8,27 +7,26 @@ void stack_init(Stack *stk)
         fprintf(stderr, "Error: stack is null pointer, not declared.\n");
         return;
     }
-    stk->sp = &regs[SP];
-    *(stk->sp) = -1;
+    stk->sp = -1;
 }
 
 void stack_push(Stack *stk, int d)
 {
-    if((*stk->sp) >= MAX - 1)
+    if(stk->sp >= MAX - 1)
     {
         fprintf(stderr, "Error: overflow in stack.\n");
         return;
     }
-    stk->data[++(*stk->sp)] = d;
+    stk->data[++stk->sp] = d;
 }
 
 int stack_pop(Stack *stk)
 {
-    if((*stk->sp) < 0) 
+    if(stk->sp < 0) 
     {
         fprintf(stderr, "Error: stack is empty.\n");
         return EXIT_FAILURE;
     }
-    int d = stk->data[(*stk->sp)--];
+    int d = stk->data[stk->sp--];
     return d;
 } 

@@ -1,7 +1,7 @@
 #include "core.h"
-#include "../registers/registers.h"
 
 bool running = true;
+int ip = 0;
 
 /** Programs */
 const int program[] = {

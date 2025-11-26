@@ -4,7 +4,6 @@ CFLAGS = -I ./src/ -g -O0 --std=c2x -Wall
 SRC = main.c \
       src/core/core.c \
       src/stack/stack.c \
-	  src/registers/registers.c
 
 OBJ = $(SRC:.c=.o)
 

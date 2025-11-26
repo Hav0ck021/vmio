@@ -7,13 +7,12 @@
 
 #include "stdio.h"
 #include "stdlib.h"
-#include "../registers/registers.h"
 
 #define MAX 256
 
 typedef struct {
     int data[MAX];  // Program Steps
-    Registers *sp;         // Stack Pointer
+    int sp;         // Stack Pointer
 } Stack;
 
 void stack_init(Stack *stk);

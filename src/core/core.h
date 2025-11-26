@@ -8,7 +8,6 @@ extern bool running;
 
 /** Instructions */
 extern int ip; // Instruction Pointer
-#define ip (regs[IP])
 
 typedef enum {
     PSH,
