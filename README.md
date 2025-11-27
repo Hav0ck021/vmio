@@ -1,5 +1,4 @@
-# vmio – Máquina Virtual Simples em C
-
+# vmio – virtual machine with input/output
 vmio é uma implementação didática de uma pequena máquina virtual escrita em C.
 O projeto demonstra conceitos fundamentais de pilha, registradores e execução de instruções.
 
