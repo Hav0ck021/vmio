@@ -1,7 +1,7 @@
+#include "include/core.h"
 #include "stdio.h"
-#include "src/core/core.h"
 
-int main()
+int main(int argc, char** argv)
 {
     run_vm();
 }
