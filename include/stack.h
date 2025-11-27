@@ -12,12 +12,11 @@
 
 typedef struct {
     int data[MAX];  // Program Steps
-    int sp;         // Stack Pointer
 } Stack;
 
-void stack_init(Stack *stk);
+__uint8_t stack_init(Stack *stk);
 
-void stack_push(Stack *stk, int d);
+__uint8_t stack_push(Stack *stk, int d);
 
 int stack_pop(Stack *stk);
 

@@ -1,5 +1,5 @@
 #include "stdio.h"
-#include "src/core/core.h"
+#include "../include/core.h"
 
 int main()
 {

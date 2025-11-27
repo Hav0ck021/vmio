@@ -2,13 +2,11 @@
 #define VMIO_H
 
 #include "stdio.h"
-#include "../stack/stack.h"
+#include "../include/stack.h"
 
 extern bool running;
 
 /** Instructions */
-extern int ip; // Instruction Pointer
-
 typedef enum {
     PSH,
     POP,
@@ -18,7 +16,7 @@ typedef enum {
 } Instructions;
 
 /** Functions */
-int fetch();
+int fetch(int idx);
 
 void eval(int instr, Stack *stack);
 

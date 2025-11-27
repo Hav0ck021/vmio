@@ -1,9 +1,10 @@
 CC = gcc
-CFLAGS = -I ./src/ -g -O0 --std=c2x -Wall
+CFLAGS = -I ./include/ -g -O0 --std=c2x -Wall
 
 SRC = main.c \
-      src/core/core.c \
-      src/stack/stack.c \
+      src/core.c \
+      src/stack.c \
+	  src/registers.c
 
 OBJ = $(SRC:.c=.o)
 

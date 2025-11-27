@@ -1,7 +1,7 @@
-#include "core.h"
+#include "../include/core.h"
+#include "../include/registers.h"
 
 bool running = true;
-int ip = 0;
 
 /** Programs */
 const int program[] = {
@@ -11,9 +11,9 @@ const int program[] = {
     EXT 
 };
 
-int fetch()
+int fetch(int idx)
 {
-    return program[ip];
+    return program[idx];
 }
 
 void eval(int instr, Stack *stack)
@@ -22,8 +22,8 @@ void eval(int instr, Stack *stack)
     {
         case PSH:
         {
-            stack_push(stack, program[++ip]);
-            printf("data pushed: %d\n", program[ip]);
+            stack_push(stack, program[++reg[ip]]);
+            printf("data pushed: %d\n", program[reg[ip]]);
             break;
         }
         case POP: {
@@ -54,7 +54,7 @@ void run_vm()
     stack_init(&stack);
     while(running)
     {
-        eval(fetch(), &stack);
-        ip++;
+        eval(fetch(reg[ip]), &stack);
+        reg[ip]++;
     }
 }
