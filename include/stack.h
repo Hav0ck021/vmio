@@ -1,7 +1,3 @@
-/*
-    stack definition.
-*/
-
 #ifndef STACK_H
 #define STACK_H
 
@@ -15,9 +11,7 @@ typedef struct {
 } Stack;
 
 __uint8_t stack_init(Stack *stk);
-
 __uint8_t stack_push(Stack *stk, int d);
-
 int stack_pop(Stack *stk);
 
 #endif // STACK_H

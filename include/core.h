@@ -6,7 +6,6 @@
 
 extern bool running;
 
-/** Instructions */
 typedef enum {
     PSH,
     POP,
@@ -15,11 +14,8 @@ typedef enum {
     EXT
 } Instructions;
 
-/** Functions */
 int fetch(int idx);
-
 void eval(int instr, Stack *stack);
-
 void run_vm();
 
 #endif // VMIO_H

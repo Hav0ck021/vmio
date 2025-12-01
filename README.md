@@ -148,10 +148,3 @@ data pushed: 5
 data pushed: 6
 add: 11
 ```
-
-## ✅ To‑Do (branch develop)
-
-- [ ] Adicionar suporte a novas instruções — definir e implementar opcodes além de PSH, POP, ADD, EXT. Exemplo: subtração, multiplicação, divisão, operações lógicas, comparação, saltos condicionais, etc.
-- [ ] Implementar suporte a memória “externa” (heap / memória RAM emulado) — permitir que a VM leia e escreva dados em uma região de memória além da pilha (para simular memória de dados, variáveis, heap, etc.).
-- [ ] Criar funcionalidade de carregamento de bytecode externo — permitir que o programa da VM seja carregado a partir de um arquivo (em vez de estar embutido como array program[]), facilitando testes e flexibilidade.
-- [ ] Desenvolver um sistema de debug / trace — registrar (ou imprimir) passo a passo da execução da VM (instrução atual, conteúdo da pilha, registradores, etc.), para facilitar depuração e compreensão do comportamento.
